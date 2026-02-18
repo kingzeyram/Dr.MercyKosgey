@@ -42,9 +42,11 @@ export default function Hero() {
                                 </button>
                             </a>
 
-                            <button className="hero-btn-secondary">
-                                Learn More
-                            </button>
+                            <a href="/about" target="_self">
+                                <button className="hero-btn-secondary">
+                                    Learn More
+                                </button>
+                            </a>
                         </div>
 
                         {/* Stats */}
