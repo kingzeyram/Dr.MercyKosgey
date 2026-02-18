@@ -35,10 +35,12 @@ export default function Hero() {
 
                         {/* CTA Buttons */}
                         <div className="flex flex-wrap gap-6 animate-fade-in-up delay-200">
-                            <button className="hero-btn-primary">
-                                Schedule Consultation
-                                <ChevronRight size={20} />
-                            </button>
+                            <a href="https://wa.me/254729387725" target="_blank" rel="noopener noreferrer">
+                                <button className="hero-btn-primary">
+                                    Schedule Consultation
+                                    <ChevronRight size={20} />
+                                </button>
+                            </a>
 
                             <button className="hero-btn-secondary">
                                 Learn More
