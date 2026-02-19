@@ -39,9 +39,9 @@ export default function Contact() {
         setSubmitStatus({ type: null, message: "" });
 
         try {
-            const serviceId = process.env.VITE_PUBLIC_EMAILJS_SERVICE_ID;
-            const templateId = process.env.VITE_PUBLIC_EMAILJS_TEMPLATE_ID;
-            const publicKey = process.env.VITE_PUBLIC_EMAILJS_PUBLIC_KEY;
+            const serviceId = process.env.VITE_EMAILJS_SERVICE_ID;
+            const templateId = process.env.VITE_EMAILJS_TEMPLATE_ID;
+            const publicKey = process.env.VITE_EMAILJS_PUBLIC_KEY;
 
             if (!serviceId || !templateId || !publicKey) {
                 throw new Error("EmailJS configuration is missing.");
