@@ -63,8 +63,13 @@ export default function Contact() {
             setSubmitStatus({
                 type: "success",
                 message: "Message sent successfully! We'll get back to you soon.",
+
             });
             setFormData({ name: "", email: "", phone: "", service: "", message: "" });
+            // Redirect to hero after a short delay so user sees the success message
+            setTimeout(() => {
+                document.getElementById("hero")?.scrollIntoView({ behavior: "smooth" });
+            }, 2000);
         } catch (error) {
             console.error("EmailJS error:", error);
             setSubmitStatus({
