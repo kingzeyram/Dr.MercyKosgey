@@ -21,7 +21,7 @@ export default function About() {
               </h2>
             </div>
 
-            <div className="space-y-6 font-sans text-lg text-[#8B6F47] leading-relaxed">
+            <div className="pl-10 space-y-6 font-sans text-lg text-[#8B6F47] leading-relaxed">
               <p>
                 Dr. Mercy Kosgey is a board-certified dermatologist with over 15 years of experience
                 in both medical and cosmetic dermatology. Her approach combines evidence-based medicine

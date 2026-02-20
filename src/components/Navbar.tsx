@@ -57,6 +57,7 @@ export default function Navbar() {
                     <a href="#services" className="mobile-link">Services</a>
                     <a href="#testimonials" className="mobile-link">Testimonials</a>
                     <a href="#contact" className="mobile-link">Contact</a>
+
                     <a href="https://wa.me/254729387725" target="_blank" rel="noopener noreferrer">
                         <button className="w-full btn-primary-modern">
                             Book Appointment
