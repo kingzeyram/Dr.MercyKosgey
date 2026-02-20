@@ -39,9 +39,9 @@ export default function Contact() {
         setSubmitStatus({ type: null, message: "" });
 
         try {
-            const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-            const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-            const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+            const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+            const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+            const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
             if (!serviceId || !templateId || !publicKey) {
                 throw new Error("EmailJS configuration is missing.");
@@ -65,14 +65,11 @@ export default function Contact() {
                 message: "Message sent successfully! We'll get back to you soon.",
             });
             setFormData({ name: "", email: "", phone: "", service: "", message: "" });
-        } catch (error: any) {
-            console.error("FULL EMAILJS ERROR:", error);
-            console.error("STATUS:", error?.status);
-            console.error("TEXT:", error?.text);
-
+        } catch (error) {
+            console.error("EmailJS error:", error);
             setSubmitStatus({
                 type: "error",
-                message: `Failed: ${error?.text || "Unknown error"}`,
+                message: "Failed to send message. Please try again later.",
             });
         } finally {
             setIsLoading(false);
