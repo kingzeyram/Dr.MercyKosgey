@@ -2,7 +2,7 @@ import { ChevronRight } from "lucide-react";
 
 export default function Hero() {
     return (
-        <section className="hero-section">
+        <section id="hero" className="hero-section">
             {/* Background Layer */}
             <div className="hero-bg"></div>
 

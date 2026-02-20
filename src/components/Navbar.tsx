@@ -23,7 +23,7 @@ export default function Navbar() {
 
                     {/* Logo */}
                     <div className="font-serif text-3xl font-bold tracking-tight text-gradient">
-                        Dr. Mercy Kosgey
+                        <a href="#hero">Dr. Mercy Kosgey</a>
                     </div>
 
                     {/* Desktop Menu */}
