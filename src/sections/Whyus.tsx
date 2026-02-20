@@ -33,7 +33,7 @@ export default function WhyUs() {
             {/* Soft decorative glow */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-[#DFD3C3] opacity-20 rounded-full blur-3xl -translate-y-1/3 translate-x-1/3"></div>
 
-            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative max-w-7xl w-full px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h2 className="font-serif text-5xl font-bold text-[#6B5843] mb-4">
                         Why Patients Choose Us

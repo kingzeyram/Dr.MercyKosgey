@@ -84,7 +84,7 @@ export default function Contact() {
 
     return (
         <section id="contact" className="contact-section py-16 md:py-32">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="relative max-w-7xl w-full px-6 lg:px-8">
                 <div className="grid lg:grid-cols-2 gap-20 items-start">
 
                     {/* LEFT SIDE CONTACT INFO */}

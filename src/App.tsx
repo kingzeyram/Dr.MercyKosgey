@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="min-h-screen  bg-[#FAF8F5]" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
       <Navbar />
-      <main className="flex-grow container mx-auto pt-[80px] md:pt-[100px] lg:pt-[100px]">
+      <main className="flex-grow  w-full pt-[80px] md:pt-[120px] lg:pt-[120px]">
         <Hero />
         <About />
         <Whyus />

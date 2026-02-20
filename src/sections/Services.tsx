@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronRight } from "lucide-react";
+// import { ChevronRight } from "lucide-react";
 import { useState } from "react";
 
 const services = [
@@ -55,15 +55,17 @@ const services = [
 ];
 
 export default function Services() {
-    const [activeService, setActiveService] = useState<number | null>(0);
-
+    const [activeService, setActiveService] = useState(false);
+    const visibleServices = activeService ? services : services.slice(0, 2);
     return (
         <section
             id="services"
-            className="services-section py-24 bg-gradient-warm relative overflow-hidden grain"
+            className="services-section py-24 px-6 bg-gradient-warm relative overflow-hidden grain"
         >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative max-w-7xl w-full px-4 sm:px-6 lg:px-8">
+                <h1 className="text-center mb-16 text-5xl font-bold text-[#6B5843]">Services</h1>
                 <div className="text-center mb-16">
+
                     <h2 className="font-serif text-5xl font-bold text-[#6B5843] mb-4">
                         Comprehensive Skin Care
                     </h2>
@@ -74,20 +76,10 @@ export default function Services() {
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {services.map((service, index) => (
+                    {visibleServices.map((service, index) => (
                         <div
-                            key={service.title}
-                            role="button"
-                            tabIndex={0}
-                            onClick={() => setActiveService(index)}
-                            onMouseEnter={() => setActiveService(index)}
-                            onKeyDown={(e) => {
-                                if (e.key === "Enter") setActiveService(index);
-                            }}
-                            className={`bg-white p-8 rounded-3xl shadow-lg transition-all duration-300 cursor-pointer hover:shadow-2xl ${index === activeService
-                                ? "ring-2 ring-[#C7956D] bg-[#fffcf8] scale-[1.02]"
-                                : ""
-                                }`}
+                            key={index}
+                            className="p-6 bg-white rounded-xl shadow hover:shadow-lg transition"
                         >
                             <div className="text-6xl mb-6">{service.icon}</div>
 
@@ -99,7 +91,7 @@ export default function Services() {
                                 {service.description}
                             </p>
 
-                            <ul className="space-y-2">
+                            {/* <ul className="space-y-2">
                                 {service.features.map((feature) => (
                                     <li
                                         key={feature}
@@ -112,14 +104,17 @@ export default function Services() {
                                         <span>{feature}</span>
                                     </li>
                                 ))}
-                            </ul>
+                            </ul> */}
                         </div>
                     ))}
                 </div>
 
-                <div className="text-center mt-12">
-                    <button className="bg-gradient-accent text-white px-8 py-4 rounded-full font-medium text-lg hover:scale-105 transition-transform">
-                        View All Services
+                <div className="text-center mt-10">
+                    <button
+                        onClick={() => setActiveService(!activeService)}
+                        className="px-6 py-3 bg-orange-50 border border-orange-500 text-orange-500 rounded-lg hover:bg-orange-500 hover:text-white transition"
+                    >
+                        {activeService ? "Show Less" : "View All Services"}
                     </button>
                 </div>
             </div>

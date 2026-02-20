@@ -10,7 +10,7 @@ export default function Hero() {
             <div className="hero-blob hero-blob-1"></div>
             <div className="hero-blob hero-blob-2"></div>
 
-            <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-28">
+            <div className="relative max-w-7xl w-full  px-6 lg:px-8 py-28">
                 <div className="grid lg:grid-cols-2 gap-20 items-center">
 
                     {/* LEFT CONTENT */}

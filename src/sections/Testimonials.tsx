@@ -33,7 +33,7 @@ export default function Testimonials() {
             {/* Decorative background glow */}
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#DFD3C3] rounded-full opacity-20 translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
 
-            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative max-w-7xl w-full px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h2 className="font-serif text-5xl font-bold text-[#6B5843] mb-4">
                         Patient Stories

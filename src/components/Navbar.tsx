@@ -13,10 +13,11 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    // Function to close mobile menu
+    const handleLinkClick = () => setIsMenuOpen(false);
+
     return (
-        <nav
-            className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}
-        >
+        <nav className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="flex justify-between items-center h-20">
 
@@ -53,10 +54,10 @@ export default function Navbar() {
             {/* Mobile Menu */}
             <div className={`mobile-menu ${isMenuOpen ? "mobile-open" : ""}`}>
                 <div className="px-6 py-8 space-y-6 font-sans">
-                    <a href="#about" className="mobile-link">About</a>
-                    <a href="#services" className="mobile-link">Services</a>
-                    <a href="#testimonials" className="mobile-link">Testimonials</a>
-                    <a href="#contact" className="mobile-link">Contact</a>
+                    <a href="#about" className="mobile-link" onClick={handleLinkClick}>About</a>
+                    <a href="#services" className="mobile-link" onClick={handleLinkClick}>Services</a>
+                    <a href="#testimonials" className="mobile-link" onClick={handleLinkClick}>Testimonials</a>
+                    <a href="#contact" className="mobile-link" onClick={handleLinkClick}>Contact</a>
 
                     <a href="https://wa.me/254729387725" target="_blank" rel="noopener noreferrer">
                         <button className="w-full btn-primary-modern">

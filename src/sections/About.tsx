@@ -9,7 +9,7 @@ export default function About() {
       {/* Soft Background Accent */}
       <div className="about-bg-blob"></div>
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="relative max-w-7xl w-full mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
 
           {/* LEFT CONTENT */}
