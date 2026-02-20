@@ -187,10 +187,11 @@ export default function Contact() {
                                 required
                             >
                                 <option value="">Select Service Type</option>
+                                <option>Consultation</option>
                                 <option>Medical Dermatology</option>
                                 <option>Cosmetic Procedures</option>
                                 <option>Skin Rejuvenation</option>
-                                <option>Consultation</option>
+
                             </select>
 
                             <textarea
