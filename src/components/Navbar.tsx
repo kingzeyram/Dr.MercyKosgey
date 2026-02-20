@@ -32,9 +32,11 @@ export default function Navbar() {
                         <a href="#testimonials" className="nav-link">Testimonials</a>
                         <a href="#contact" className="nav-link">Contact</a>
 
-                        <button className="btn-primary-modern">
-                            Book Appointment
-                        </button>
+                        <a href="https://wa.me/254729387725" target="_blank" rel="noopener noreferrer">
+                            <button className="w-full btn-primary-modern">
+                                Book Appointment
+                            </button>
+                        </a>
                     </div>
 
                     {/* Mobile Menu Button */}
