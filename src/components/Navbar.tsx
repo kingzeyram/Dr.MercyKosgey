@@ -33,7 +33,7 @@ export default function Navbar() {
                         <a href="#testimonials" className="nav-link">Testimonials</a>
                         <a href="#contact" className="nav-link">Contact</a>
 
-                        <a href="https://wa.me/254729387725" target="_blank" rel="noopener noreferrer">
+                        <a href="#contact-book">
                             <button className="w-full btn-primary-modern">
                                 Book Appointment
                             </button>
@@ -49,23 +49,24 @@ export default function Navbar() {
                         {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
                     </button>
                 </div>
-            </div>
+            </div >
 
             {/* Mobile Menu */}
-            <div className={`mobile-menu ${isMenuOpen ? "mobile-open" : ""}`}>
+            < div className={`mobile-menu ${isMenuOpen ? "mobile-open" : ""}`
+            }>
                 <div className="px-6 py-8 space-y-6 font-sans">
                     <a href="#about" className="mobile-link" onClick={handleLinkClick}>About</a>
                     <a href="#services" className="mobile-link" onClick={handleLinkClick}>Services</a>
                     <a href="#testimonials" className="mobile-link" onClick={handleLinkClick}>Testimonials</a>
                     <a href="#contact" className="mobile-link" onClick={handleLinkClick}>Contact</a>
 
-                    <a href="https://wa.me/254729387725" target="_blank" rel="noopener noreferrer">
+                    <a href="#contact-book" onClick={handleLinkClick}>
                         <button className="w-full btn-primary-modern">
                             Book Appointment
                         </button>
                     </a>
                 </div>
-            </div>
-        </nav>
+            </div >
+        </nav >
     );
 }

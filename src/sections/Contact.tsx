@@ -140,8 +140,8 @@ export default function Contact() {
                     </div>
 
                     {/* RIGHT SIDE FORM */}
-                    <div className="contact-form-card animate-fade-in-up delay-200">
-                        <h3 className="contact-form-title">Book Your Consultation</h3>
+                    <div id="contact-book" className="contact-form-card animate-fade-in-up delay-200">
+                        <h3 className=" contact-form-title">Book Your Consultation</h3>
 
                         <form className="space-y-6" onSubmit={handleSubmit}>
                             <input
