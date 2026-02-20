@@ -65,11 +65,14 @@ export default function Contact() {
                 message: "Message sent successfully! We'll get back to you soon.",
             });
             setFormData({ name: "", email: "", phone: "", service: "", message: "" });
-        } catch (error) {
-            console.error("EmailJS error:", error);
+        } catch (error: any) {
+            console.error("FULL EMAILJS ERROR:", error);
+            console.error("STATUS:", error?.status);
+            console.error("TEXT:", error?.text);
+
             setSubmitStatus({
                 type: "error",
-                message: "Failed to send message. Please try again later.",
+                message: `Failed: ${error?.text || "Unknown error"}`,
             });
         } finally {
             setIsLoading(false);
